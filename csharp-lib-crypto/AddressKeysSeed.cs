@@ -96,6 +96,25 @@ namespace csharp_lib_crypto
             }
             var mask = new BigInteger(new byte[] { 255, 7, 0, 0 }); // 11 lower bits
             return string.Join(" ", result.Select(bigint => _seedWords[(int)(bigint & mask)]));
+        }        
+    }
+
+    public class KeyPair : IKeyPair
+    {
+        public PublicKey PublicKey { get; }
+        public PrivateKey PrivateKey { get; }
+
+        public KeyPair(PublicKey publicKey, PrivateKey privateKey)
+        {
+            PublicKey = publicKey;
+            PrivateKey = privateKey;
+        }
+
+        public KeyPair(string seed)
+        {
+            var crypto = new WavesCrypto();
+            PublicKey = crypto.PublicKey(seed);
+            PrivateKey = crypto.PrivateKey(seed);
         }
     }
 }

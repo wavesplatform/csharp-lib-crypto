@@ -17,18 +17,6 @@ namespace csharp_lib_crypto
         private static readonly IHash Keccak256 = HashFactory.Crypto.SHA3.CreateKeccak256();
         private static List<string> _seedWords;
 
-        public class KeyPair : IKeyPair
-        {
-            public PublicKey PublicKey { get; }
-            public PrivateKey PrivateKey { get; }
-
-            public KeyPair(PublicKey publicKey, PrivateKey privateKey)
-            {
-                PublicKey = publicKey;
-                PrivateKey = privateKey;
-            }
-        }     
-
         public byte[] RandomBytes(int size)
         {
             byte[] randomBytes = new byte[size];

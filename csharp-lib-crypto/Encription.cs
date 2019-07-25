@@ -37,14 +37,14 @@ namespace csharp_lib_crypto
             return aes;
         }
 
-        public string MessageDecrypt(byte[] sharedKey, byte[] encryptedMessage, string prefix)
+        public string MessageDecrypt(byte[] sharedKey, byte[] encryptedMessage, string prefix = "")
         {
             string decryptedMessage;
-            var key = CngKey.Import(sharedKey, CngKeyBlobFormat.EccPublicBlob);
-            var derivedKey = this.diffieHellman.DeriveKeyMaterial(key);
-
-            this.aes.Key = derivedKey;
-            this.aes.IV = StringToBytes(prefix);
+            this.aes = new AesCryptoServiceProvider();
+            aes.Key = sharedKey;
+            byte[] iv = new byte[16];
+            Array.Copy(sharedKey, 16, iv, 0, 16);
+            aes.IV = iv;
 
             using (var plainText = new MemoryStream())
             {
@@ -56,19 +56,18 @@ namespace csharp_lib_crypto
                     }
                 }
 
-                decryptedMessage = Encoding.UTF8.GetString(plainText.ToArray());
+                decryptedMessage = Encoding.ASCII.GetString(plainText.ToArray());
             }
 
             return decryptedMessage;
         }
 
-        public byte[] MessageEncrypt(byte[] sharedKey, string message, string prefix)
+        public byte[] MessageEncrypt(byte[] sharedKey, string message, string prefix = "")
         {
             byte[] encryptedMessage;
-            var key = CngKey.Import(sharedKey, CngKeyBlobFormat.EccPublicBlob);
-            var derivedKey = this.diffieHellman.DeriveKeyMaterial(key); // "Common secret"
 
-            aes.Key = derivedKey;
+            this.aes = new AesCryptoServiceProvider();
+            aes.Key = sharedKey;
 
             using (var cipherText = new MemoryStream())
             {
@@ -76,7 +75,7 @@ namespace csharp_lib_crypto
                 {
                     using (var cryptoStream = new CryptoStream(cipherText, encryptor, CryptoStreamMode.Write))
                     {
-                        byte[] ciphertextMessage = Encoding.UTF8.GetBytes(message);
+                        byte[] ciphertextMessage = Encoding.ASCII.GetBytes(message);
                         cryptoStream.Write(ciphertextMessage, 0, ciphertextMessage.Length);
                     }
                 }

@@ -41,7 +41,6 @@ C:\Users\abegicheva.WAVES\source\csharp-lib-crypto\csharp-lib-crypto\bin\Debug\P
 C:\Users\abegicheva.WAVES\source\csharp-lib-crypto\csharp-lib-crypto\bin\Debug\PInvoke.NCrypt.xml
 C:\Users\abegicheva.WAVES\source\csharp-lib-crypto\csharp-lib-crypto\bin\Debug\PInvoke.Windows.Core.xml
 C:\Users\abegicheva.WAVES\source\csharp-lib-crypto\csharp-lib-crypto\bin\Debug\Validation.xml
-C:\Users\abegicheva.WAVES\source\csharp-lib-crypto\csharp-lib-crypto\obj\Debug\csharp-lib-crypto.csprojAssemblyReference.cache
 C:\Users\abegicheva.WAVES\source\csharp-lib-crypto\csharp-lib-crypto\obj\Debug\csharp-lib-crypto.csproj.CoreCompileInputs.cache
 C:\Users\abegicheva.WAVES\source\csharp-lib-crypto\csharp-lib-crypto\obj\Debug\csharp-lib-crypto.csproj.CopyComplete
 C:\Users\abegicheva.WAVES\source\csharp-lib-crypto\csharp-lib-crypto\obj\Debug\csharp-lib-crypto.dll

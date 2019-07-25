@@ -4,7 +4,6 @@
     using PrivateKey = System.String;
     using Seed = System.String;
     using Address = System.String;
-    using ChainId = System.Int32;
 
     public interface IKeyPair
     {
