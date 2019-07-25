@@ -39,6 +39,8 @@ namespace csharp_lib_crypto
 
         public string MessageDecrypt(byte[] sharedKey, byte[] encryptedMessage, string prefix = "")
         {
+            throw new NotImplementedException();
+            /*
             string decryptedMessage;
             this.aes = new AesCryptoServiceProvider();
             aes.Key = sharedKey;
@@ -59,12 +61,13 @@ namespace csharp_lib_crypto
                 decryptedMessage = Encoding.ASCII.GetString(plainText.ToArray());
             }
 
-            return decryptedMessage;
+            return decryptedMessage;*/
         }
 
         public byte[] MessageEncrypt(byte[] sharedKey, string message, string prefix = "")
         {
-            byte[] encryptedMessage;
+            throw new NotImplementedException();
+            /*byte[] encryptedMessage;
 
             this.aes = new AesCryptoServiceProvider();
             aes.Key = sharedKey;
@@ -83,7 +86,7 @@ namespace csharp_lib_crypto
                 encryptedMessage = cipherText.ToArray();
             }
 
-            return encryptedMessage;
+            return encryptedMessage;*/
         }
 
         void Car25519(long[] o)

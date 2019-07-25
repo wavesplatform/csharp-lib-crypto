@@ -18,12 +18,6 @@ namespace csharp_lib_crypto_test
             var sharedKey1 =  crypto.SharedKey(crypto.Base58Decode(a.PrivateKey), crypto.Base58Decode(b.PublicKey), "waves");
             var sharedKey2 = crypto.SharedKey(crypto.Base58Decode(b.PrivateKey), crypto.Base58Decode(a.PublicKey), "waves");
             CollectionAssert.AreEqual(sharedKey1, sharedKey2);
-
-            var message = "Waves is awesome!";
-            var messageEncript = crypto.MessageEncrypt(sharedKey1, message);
-            var messageDecrypt = crypto.MessageDecrypt(sharedKey1, messageEncript);
-            
-            Assert.AreEqual(messageDecrypt, message);
         }
     }
 }
