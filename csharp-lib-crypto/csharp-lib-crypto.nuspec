@@ -24,6 +24,8 @@
       <reference file="Blake2Sharp.dll" />
       <reference file="curve25519.dll" />
       <reference file="HashLib.dll" />
+      <reference file="csharp-lib-crypto.dll" />
+      <reference file="Newtonsoft.Json.dll" />
     </references>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System" />
