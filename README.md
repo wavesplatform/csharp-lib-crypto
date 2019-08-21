@@ -17,43 +17,43 @@ string seed = crypto.RandomSeed();
 ### publicKey
 ```csharp
 var crypto = new WavesCrypto();
-string seed = "uncle push human bus echo drastic garden joke sand warfare sentence fossil title color combine"
+string seed = "uncle push human bus echo drastic garden joke sand warfare sentence fossil title color combine";
 var publicKey = crypto.PublicKey(seed);
 int nonce = 0;
-var publicKey = crypto.PublicKey(seed, nonce);
+publicKey = crypto.PublicKey(seed, nonce);
 ```
 ### privateKey
 ```csharp
 var crypto = new WavesCrypto();
-string seed = "uncle push human bus echo drastic garden joke sand warfare sentence fossil title color combine"
+string seed = "uncle push human bus echo drastic garden joke sand warfare sentence fossil title color combine";
 var privateKey = crypto.PrivateKey(seed);
 int nonce = 0;
-var privateKey = crypto.PrivateKey(seed, nonce);
+privateKey = crypto.PrivateKey(seed, nonce);
 ```
 
 ### keyPair
 ```csharp
 var crypto = new WavesCrypto();
-string seed = "uncle push human bus echo drastic garden joke sand warfare sentence fossil title color combine"
+string seed = "uncle push human bus echo drastic garden joke sand warfare sentence fossil title color combine";
 var keyPair = new KeyPair(seed);
 ```
 ### address
 ```csharp
 var crypto = new WavesCrypto();
-string seed = "uncle push human bus echo drastic garden joke sand warfare sentence fossil title color combine"
+string seed = "uncle push human bus echo drastic garden joke sand warfare sentence fossil title color combine";
 var address = crypto.Address(seed, WavesChainId.MAIN_NET_CHAIN_ID); //or WavesChainId.TEST_NET_CHAIN_ID
 ```
 ## Signatures
 ### signBytes
 ```csharp
-            var crypto = new WavesCrypto();
-            var seed = "uncle push human bus echo drastic garden joke sand warfare sentence fossil title color combine";
-            var bytes = new byte[] { 117, 110, 99, 108, 101};
+var crypto = new WavesCrypto();
+var seed = "uncle push human bus echo drastic garden joke sand warfare sentence fossil title color combine";
+var bytes = new byte[] { 117, 110, 99, 108, 101};
             
-            var sign = crypto.SignBytes(bytes, seed);
+var sign = crypto.SignBytes(bytes, seed);
             
-            var privateKey = "8bg5KM2n5kKQE6bVZssvwMEivc6ctyKahfGLkQfszZfY";
-            var sign2 = crypto.SignBytesWithPrivateKey(bytes, privateKey);
+var privateKey = "8bg5KM2n5kKQE6bVZssvwMEivc6ctyKahfGLkQfszZfY";
+var sign2 = crypto.SignBytesWithPrivateKey(bytes, privateKey);
 ```
 ### verifySignature
 ```csharp
@@ -61,7 +61,7 @@ var crypto = new WavesCrypto();
 var seed = "uncle push human bus echo drastic garden joke sand warfare sentence fossil title color combine";
 var bytes = new byte[] { 117, 110, 99, 108, 101};
 var sign = crypto.SignBytes(bytes, seed);
-crypto.VerifySignature(publicKeyInit, bytes, sign)
+crypto.VerifySignature(publicKeyInit, bytes, sign);
 ```
 
 ## Hashing
