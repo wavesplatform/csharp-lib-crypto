@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>WavesPlatform.csharp-lib-crypto</id>
+    <version>0.0.1</version>
+    <title>WavesPlatform.csharp-lib-crypto</title>
+    <authors>abegicheva</authors>
+    <owners>abegicheva</owners>
+    <licenseUrl>https://github.com/wavesplatform/csharp-lib-crypto/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/wavesplatform/csharp-lib-crypto</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Waves Platform C# crypto library</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="Newtonsoft.Json" version="11.0.2" />
+      <dependency id="PCLCrypto" version="2.0.147" />
+      <dependency id="PInvoke.BCrypt" version="0.3.2" />
+      <dependency id="PInvoke.Kernel32" version="0.3.2" />
+      <dependency id="PInvoke.NCrypt" version="0.3.2" />
+      <dependency id="PInvoke.Windows.Core" version="0.3.2" />
+      <dependency id="Validation" version="2.2.8" />
+    </dependencies>
+    <references>
+      <reference file="Blake2Sharp.dll" />
+      <reference file="curve25519.dll" />
+      <reference file="HashLib.dll" />
+    </references>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="net45" />
+      <frameworkAssembly assemblyName="System.Data" targetFramework="net45" />
+      <frameworkAssembly assemblyName="System.Xml" targetFramework="net45" />
+      <frameworkAssembly assemblyName="System.Xml.Linq" targetFramework="net45" />
+      <frameworkAssembly assemblyName="System.Numerics" targetFramework="net45" />
+      <frameworkAssembly assemblyName="System.IO.Compression.FileSystem" />
+      <frameworkAssembly assemblyName="System.Runtime.Serialization" />    
+    </frameworkAssemblies>
+    <copyright>Copyright 2019</copyright>
+    <tags>waves wavesplatform crypto</tags>
+  </metadata>
+</package>
