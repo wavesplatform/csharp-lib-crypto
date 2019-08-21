@@ -9,7 +9,7 @@ namespace csharp_lib_crypto
     public partial class WavesCrypto
     {
         private Aes aes = null;
-        private ECDiffieHellmanCng diffieHellman = null;
+        // private ECDiffieHellmanCng diffieHellman = null;
 
         public Aes DeriveKeyAndIv(byte[] privateKeyFrom, byte[] publicKeyTo, string prefix)
         {
